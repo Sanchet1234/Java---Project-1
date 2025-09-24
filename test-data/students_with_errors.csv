@@ -1,0 +1,16 @@
+# Valid Cases
+STU001,CS123456,John Doe,john.doe@university.edu
+STU002,IT123457,Jane Smith,jane.smith@university.edu
+
+# Error Cases - Invalid Registration Numbers
+STU003,cs123458,Invalid Case,lowercase.cs@university.edu
+STU004,C1234567,Invalid Length,toolong@university.edu
+STU005,C12345,Too Short,tooshort@university.edu
+
+# Error Cases - Invalid Emails
+STU006,CS123460,No Email,
+STU007,CS123461,Invalid Email,invalid.email
+
+# Error Cases - Empty Fields
+STU008,,Empty RegNo,empty.regno@university.edu
+,CS123462,Empty ID,empty.id@university.edu

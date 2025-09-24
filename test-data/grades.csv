@@ -1,0 +1,29 @@
+# Format: studentRegNo,courseCode,marks
+# Valid Grades
+CS123456,CS101,85    # Expected grade: A
+CS123456,CS201,92    # Expected grade: S
+IT123457,IT201,78    # Expected grade: B
+
+# Boundary Cases
+CS123458,CS101,90    # Boundary for S grade
+CS123458,CS201,80    # Boundary for A grade
+CS123458,IT201,70    # Boundary for B grade
+IT123459,CS101,60    # Boundary for C grade
+IT123459,IT201,50    # Boundary for D grade
+IT123459,CS201,40    # Boundary for E grade
+IT123460,CS101,39    # Just below passing (F grade)
+
+# Invalid Cases
+CS123456,XX101,85    # Invalid course code
+XX123456,CS101,85    # Invalid student regNo
+CS123456,CS101,101   # Marks > 100
+CS123456,CS101,-1    # Negative marks
+
+# Not Enrolled Cases
+CS123457,IT201,85    # Student not enrolled in course
+
+# Multiple Grades for GPA Calculation
+CS123456,CS101,85    # A grade (9.0)
+CS123456,CS201,92    # S grade (10.0)
+CS123456,IT201,78    # B grade (8.0)
+# Expected GPA: (9.0 + 10.0 + 8.0) / 3 = 9.0

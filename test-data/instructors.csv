@@ -1,0 +1,29 @@
+# Format: instructorId,fullName,email,department
+# Valid Instructors
+INS001,Dr. John Smith,john.smith@university.edu,Computer Science
+INS002,Prof. Jane Doe,jane.doe@university.edu,Information Technology
+INS003,Dr. Robert Wilson,robert.wilson@university.edu,Computer Science
+
+# Course Assignments (Format: instructorId,courseCode,semester)
+# Valid Assignments
+INS001,CS101,FALL    # CS prof teaching CS course
+INS002,IT201,SPRING  # IT prof teaching IT course
+INS003,CS201,FALL    # CS prof teaching CS course
+
+# Cross-Department Teaching
+INS001,IT201,FALL    # CS prof teaching IT course
+INS002,CS101,SPRING  # IT prof teaching CS course
+
+# Workload Test Cases
+INS001,CS101,FALL    # First course
+INS001,CS201,FALL    # Second course
+INS001,CS301,FALL    # Third course (might exceed workload)
+
+# Invalid Cases
+INS999,CS101,FALL    # Non-existent instructor
+INS001,XX101,FALL    # Invalid course code
+INS001,CS101,WINTER  # Invalid semester
+
+# Availability Conflicts
+INS002,CS101,FALL    # Already teaching IT201
+INS002,CS201,FALL    # Potential time conflict

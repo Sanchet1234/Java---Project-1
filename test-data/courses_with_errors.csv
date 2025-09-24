@@ -1,0 +1,19 @@
+# Valid Cases
+CS101,Introduction to Programming,3,INS001,FALL,Computer Science
+IT201,Database Systems,4,INS002,SPRING,Information Technology
+
+# Error Cases - Invalid Credits
+CS102,Invalid Credits,0,INS001,FALL,Computer Science
+IT202,Too Many Credits,7,INS002,SPRING,Information Technology
+
+# Error Cases - Invalid Semester
+CS103,Web Development,3,INS003,WINTER,Computer Science
+
+# Error Cases - Empty Fields
+CS104,,3,INS001,FALL,Computer Science
+,Empty Code Course,3,INS002,SPRING,Information Technology
+
+# Error Cases - Credit Limit Scenarios
+CS301,Heavy Course 1,5,INS001,FALL,Computer Science
+CS302,Heavy Course 2,5,INS001,FALL,Computer Science
+CS303,Heavy Course 3,5,INS001,FALL,Computer Science

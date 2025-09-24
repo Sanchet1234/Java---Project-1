@@ -1,0 +1,22 @@
+# Format: studentRegNo,courseCode,semester
+# Valid Enrollments
+CS123456,CS101,FALL
+CS123456,CS201,FALL
+IT123457,IT201,SPRING
+
+# Credit Limit Test Cases
+CS123458,CS101,FALL    # First course (3 credits)
+CS123458,CS201,FALL    # Additional course (4 credits)
+CS123458,IT201,FALL    # Would exceed credit limit (4 credits more)
+
+# Cross-Department Enrollments
+CS123459,IT201,SPRING  # CS student in IT course
+IT123460,CS101,FALL    # IT student in CS course
+
+# Invalid Cases
+XX999999,CS101,FALL    # Invalid student regNo
+CS123456,XX999,FALL    # Invalid course code
+CS123456,CS101,WINTER  # Invalid semester
+
+# Duplicate Enrollment Attempts
+CS123456,CS101,FALL    # Duplicate of first entry
